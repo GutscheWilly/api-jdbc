@@ -26,9 +26,9 @@ public class Program {
             sqlException.printStackTrace();
         }
         finally {
-            Database.closeConnection();
-            Database.closeStatement(statement);
             Database.closeResultSet(resultSet);
+            Database.closeStatement(statement);
+            Database.closeConnection();
         }
     }
 }
