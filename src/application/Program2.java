@@ -24,7 +24,8 @@ public class Program2 {
                 + "(Name, Email, BirthDate, BaseSalary, DepartmentID) "
                 + "VALUES "
                 + "(?, ?, ?, ?, ?)",
-                Statement.RETURN_GENERATED_KEYS);
+                Statement.RETURN_GENERATED_KEYS
+            );
             preparedStatement.setString(1, "Carl Purple");
             preparedStatement.setString(2, "carl@gmail.com");
             preparedStatement.setDate(3, new java.sql.Date(simpleDateFormat.parse("22/04/1985").getTime()));
